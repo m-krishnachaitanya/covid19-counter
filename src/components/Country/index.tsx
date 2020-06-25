@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import Chart from '../chart';
 
 const Country:React.FC = () => {
 
@@ -7,7 +8,6 @@ const Country:React.FC = () => {
     const url = 'https://cors-anywhere.herokuapp.com/https://covid19-api-data.herokuapp.com/';
     
     const [countries, setCountries] = React.useState<React.SetStateAction<string>[]>([]);
-    const [country, setCountry] = React.useState("");
     const [countryindex, setCountryindex] = React.useState(-1);
         
     const [confirmed, setConfirmed] = React.useState(0);
@@ -38,6 +38,9 @@ const Country:React.FC = () => {
         const response = await fetch(url+"countries");
         const data = await response.json();
         setCountries(data.countries);
+        // fetch(url+"countries")
+        // .then(response => response.json())
+        // .then(data => setCountries(data.countries));
         setCountryindex(0);
       }
     
@@ -68,10 +71,22 @@ const Country:React.FC = () => {
         </select>
         <article className="country-analysis">
           <article className="overall">
-            <article className="common confirmed"><p>Confirmed: {confirmed}</p></article>
-            <article className="common recovered"><p>Recovered: {recovered}</p></article>
-            <article className="common deaths"><p>Deaths: {deaths}</p></article>
-            <article className="common active"><p>Active: {active}</p></article>
+            <article>
+              <article className="common confirmed"><p>Confirmed: {confirmed}</p></article>
+              <Chart linedata={confirmedData} color="red"/>
+            </article>
+            <article>
+              <article className="common recovered"><p>Recovered: {recovered}</p></article>
+              <Chart linedata={recoveredData} color="green"/>
+            </article>
+            <article>
+              <article className="common deaths"><p>Deaths: {deaths}</p></article>
+              <Chart linedata={deathsData} color="red"/>
+            </article>
+            <article>
+              <article className="common active"><p>Active: {active}</p></article>
+              <Chart linedata={activeData} color="orange"/>
+            </article>
           </article>
           <article className="today">
             <article className="common todayconfirmed"><p>Today Confirmed: {todayconfirmed}</p></article>

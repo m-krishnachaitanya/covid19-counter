@@ -51,10 +51,10 @@
   font-size: 3em;
   font-weight: bold;
   color: blue;
+  text-align: center;
 }
 @media only screen and (max-width: 450px){
   .App-header{
-    height: 20vh;
     width: 100%;
     display: flex;
   }
@@ -64,7 +64,6 @@
     margin-left: 3vh;
   }
   .App-header .title{
-    height: 11vh;
     font-size: 2em;
     margin-left: -3vh;
   }
