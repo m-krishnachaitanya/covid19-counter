@@ -20,6 +20,9 @@ function App() {
         <p className="stateHeader">StateWise Analysis</p>
         <State/>
       </section>
+      <article>
+        <script data-ad-client="pub-7333060626743598" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      </article>
     </div>
   );
 }
