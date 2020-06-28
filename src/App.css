@@ -1,7 +1,8 @@
 .App{
   padding: 0 5vh;
-  height: 100vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -33,21 +34,19 @@
           background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.view{
-  height: 50vh;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
 .countrySection{
   margin-top: -5vh;
 }
 .countryHeader{
+  font-size: 3em;
+  font-weight: bold;
+  color: blue;
+  text-align: center;
+}
+.stateSection{
+  margin-top: -10vh;
+}
+.stateHeader{
   font-size: 3em;
   font-weight: bold;
   color: blue;
@@ -68,6 +67,12 @@
     margin-left: -3vh;
   }
   .countryHeader{
+    font-size: 1.7em;
+  }
+  .stateSection{
+    margin-top: -5vh;
+  }
+  .stateHeader{
     font-size: 1.7em;
   }
 }

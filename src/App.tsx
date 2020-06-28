@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.png';
 import './App.css';
 import Country from './components/Country';
+import State from './components/States';
 
 function App() {
   
@@ -14,6 +15,10 @@ function App() {
       <section className="countrySection">
         <p className="countryHeader">CountryWise Analysis</p>
         <Country/>
+      </section>
+      <section className="stateSection">
+        <p className="stateHeader">StateWise Analysis</p>
+        <State/>
       </section>
     </div>
   );

@@ -1,5 +1,5 @@
-  
-  .view{
+
+.view{
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10,7 +10,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .countries{
+.states{
     height: 5vh;
     width: 15vw;
     padding: 1vh;
@@ -19,7 +19,7 @@
     background-color: white;
     text-align: center;
   }
-  .country-analysis{
+  .state-analysis{
     width: 100%;
     margin: 5vh auto;
     display: -webkit-box;
@@ -44,7 +44,6 @@
             box-sizing: border-box;
     font-size: 2em;
     border-radius: 2vh;
-    margin-bottom: 3vh;
   }
   .common p{
     width: 100%;
@@ -58,23 +57,6 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     margin-bottom: 5vh;
-  }
-  .current{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin-bottom: 5vh;
-  }
-  .today{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
   }
   .confirmed{
     background-image: -webkit-gradient(linear,left top, right top,from(orange),to(red));
@@ -104,39 +86,9 @@
     -webkit-box-shadow: 0 0 2vh red;
             box-shadow: 0 0 2vh red;
   }
-  .today{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin-bottom: 5vh;
-  }
-  .todayconfirmed{
-    background-image: -webkit-gradient(linear,left bottom, right top,from(orange),to(red));
-    background-image: -o-linear-gradient(bottom left,orange,red);
-    background-image: linear-gradient(to top right,orange,red);
-    -webkit-box-shadow: 0 0 2vh orange;
-            box-shadow: 0 0 2vh orange;
-  }
-  .todaydeaths{
-    background-image: -webkit-gradient(linear,left top, right bottom,from(red),to(orange));
-    background-image: -o-linear-gradient(top left,red,orange);
-    background-image: linear-gradient(to bottom right,red,orange);
-    -webkit-box-shadow: 0 0 2vh orange;
-            box-shadow: 0 0 2vh orange;
-  }
-  .todayrecovered{
-    background-image: -webkit-gradient(linear,left bottom, right top,from(rgb(12, 245, 12)),to(green));
-    background-image: -o-linear-gradient(bottom left,rgb(12, 245, 12),green);
-    background-image: linear-gradient(to top right,rgb(12, 245, 12),green);
-    -webkit-box-shadow: 0 0 2vh rgb(12, 245, 12);
-            box-shadow: 0 0 2vh rgb(12, 245, 12);
-  }
   
   @media only screen and (max-width: 450px){
-    .countries{
+    .states{
       height: 10vh;
       width: 70vw;
       font-size: 1.5em;
@@ -146,13 +98,6 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      margin-bottom: 0;
-    }
-    .today{
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 0;
     }
     .common{
       width: 80vw;
