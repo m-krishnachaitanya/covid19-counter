@@ -1,5 +1,5 @@
 .App{
-  padding: 0 5vh;
+  padding: 0 5vh 5vh 5vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@
   text-align: center;
 }
 .stateSection{
-  margin-top: -10vh;
+  margin-top: 0vh;
 }
 .stateHeader{
   font-size: 3em;
@@ -70,7 +70,7 @@
     font-size: 1.7em;
   }
   .stateSection{
-    margin-top: -5vh;
+    margin-top: 0vh;
   }
   .stateHeader{
     font-size: 1.7em;

@@ -27,7 +27,9 @@ const Country:React.FC = () => {
         getdata();
         setStatus("loaded");
       }
+      else{
         handleChange();
+      }
     },[countryindex]);
 
     const onchangehandle = (event: any) => {
@@ -41,8 +43,7 @@ const Country:React.FC = () => {
         // fetch(url+"countries")
         // .then(response => response.json())
         // .then(data => setCountries(data.countries));
-        setCountryindex(0);
-      }
+      };
     
       const handleChange = async () =>{
         const response = await fetch(url+"country/"+countries[countryindex]);
@@ -66,10 +67,11 @@ const Country:React.FC = () => {
 
     return (<>
     <article className="view">
-        <select onChange={onchangehandle} className="countries">
+        <select onChange={onchangehandle} className="countries" defaultValue={'SELECT COUNTRY'}>
+          <option key="none" value="SELECT COUNTRY" disabled>SELECT COUNTRY</option>
           {countryOptions}
         </select>
-        <article className="country-analysis">
+        <article className="country-analysis" style={{display:countryindex===-1?"none":"flex"}}>
           <article className="overall">
             <article>
               <article className="common confirmed"><p>Confirmed: {confirmed}</p></article>
@@ -94,7 +96,8 @@ const Country:React.FC = () => {
             <article className="common todaydeaths"><p>Today Deaths: {todaydeaths}</p></article>
           </article>
         </article>
-      </article></>);
+      </article>
+      </>);
 }
 
 export default Country;

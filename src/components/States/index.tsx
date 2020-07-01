@@ -19,7 +19,9 @@ const State:React.FC = () => {
         getdata();
         setStatus("loaded");
       }
+      else{
         handleChange();
+      }
     },[stateindex]);
 
     const onchangehandle = (event: any) => {
@@ -30,8 +32,7 @@ const State:React.FC = () => {
         const response = await fetch(url+"states");
         const data = await response.json();
         setStates(data.states);
-        setStateindex(0);
-      }
+      };
     
       const handleChange = async () =>{
         const response = await fetch(url+"state/"+states[stateindex]);
@@ -48,10 +49,11 @@ const State:React.FC = () => {
 
     return (<>
     <article className="view">
-        <select onChange={onchangehandle} className="states">
+        <select onChange={onchangehandle} className="states" defaultValue={'SELECT STATE'}>
+          <option value="SELECT STATE" disabled>SELECT STATE</option>
           {stateOptions}
         </select>
-        <article className="state-analysis">
+        <article className="state-analysis" style={{display:stateindex===-1?"none":"flex"}}>
           <article className="overall">
             <article>
               <article className="common confirmed"><p>Confirmed: {confirmed}</p></article>
@@ -68,6 +70,6 @@ const State:React.FC = () => {
           </article>
         </article>
       </article></>);
-}
+};
 
 export default State;

@@ -56,7 +56,6 @@
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    margin-bottom: 5vh;
   }
   .confirmed{
     background-image: -webkit-gradient(linear,left top, right top,from(orange),to(red));
