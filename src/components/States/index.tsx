@@ -49,7 +49,7 @@ const State:React.FC = () => {
 
     return (<>
     <article className="view">
-        <select onChange={onchangehandle} className="states" defaultValue={'SELECT STATE'}>
+        <select onChange={onchangehandle} className="states" defaultValue={"SELECT STATE"}>
           <option value="SELECT STATE" disabled>SELECT STATE</option>
           {stateOptions}
         </select>

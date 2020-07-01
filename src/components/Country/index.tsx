@@ -67,7 +67,7 @@ const Country:React.FC = () => {
 
     return (<>
     <article className="view">
-        <select onChange={onchangehandle} className="countries" defaultValue={'SELECT COUNTRY'}>
+        <select onChange={onchangehandle} className="countries" defaultValue={"SELECT COUNTRY"}>
           <option key="none" value="SELECT COUNTRY" disabled>SELECT COUNTRY</option>
           {countryOptions}
         </select>
